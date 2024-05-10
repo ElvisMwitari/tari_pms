@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "start-backend": "php artisan serve",
+    "start-frontend": "cd breeze-next && npm run dev",
+    "install-backend": "composer install",
+    "install-frontend": "cd breeze-next && npm install --force",
+    "install": "npm run install-backend && npm run install-frontend",
+    "migration": "php artisan migrate --seed",
+    "seed": "php artisan db:seed --seed --seeder=RoleSeeder",
+    "refresh": "php artisan migrate:refresh --seed",
+    "setup": "npm run migration && npm run seed",
+
+
+    "start": "npm run start-backend & npm run start-frontend"
+  },
+
+  "devDependencies": {
+    "@babel/preset-react": "^7.24.7"
+  }
+}
